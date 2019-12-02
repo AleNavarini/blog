@@ -45,5 +45,13 @@
         </nav>
     </header>
     
+    
+        {% for p in posts %}
+
+        <p> {{p.titulo}}  </p>
+        <p> {{p.subtitulo}}  </p>
+        <p> {{p.contenido|safe}}  </p>
+
+        {% endfor %}
 </body>
 </html>
