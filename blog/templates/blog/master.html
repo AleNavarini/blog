@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <title>Inicio</title> 
+    
+    {% load static %}
+    <link  href="{% static 'blog/master.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+                <ul class="barra">
+                    <li>    
+                        <a href="master.html"></a>
+                        <img src="../../static/images/logo.png" alt="Medicina Cierta e Incierta" width="180" height="180">
+                    </li>
+                    
+                
+                    <ul class="barra2">
+                        <li>
+                            <form class="buscar">
+                                    <input type="text" name="buscar" id="txtBuscar">
+                                    <input type="button" value="Buscar" id="btnBuscar">
+                            </form>
+                        </li>
+                        <li class = "lnkList">
+                            <li class="links"><a href="#">Inicio</a></li>
+                            <li class="links"><a href="#">Articulos</a></li>
+                            <li class="links"><a href="#">Colaboraciones</a></li>
+                            <li class="links"><a href="#">Acerca de Mi</a></li>
+                        </li>
+                    </ul>
+                </ul>
+        </nav>
+          
+    
+        {% for p in posts %}
+
+        <p> {{p.titulo}}  </p>
+        <p> {{p.subtitulo}}  </p>
+        <p> {{p.contenido|safe}}  </p>
+
+        {% endfor %}
+</body>
+</html>

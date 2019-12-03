@@ -1,0 +1,63 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+nav
+{
+    background: rgb(54, 90, 131);
+    
+}
+ul
+{
+    list-style-type: none;
+    color: #ffffff;
+}
+nav ul li a
+{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+    .links
+{
+    padding: 1em 3em;
+    display: inline;
+}
+.links:hover
+{
+    background-color: #aaaaaa;
+}
+
+.barra
+{
+    display: flex;
+    width: 100%;
+}
+.barra2
+{
+    text-align: end;
+    width: 100%;
+}
+.buscar
+{
+    padding: 1em;
+    margin-bottom: 6em;
+}
+#txtBuscar
+{
+    padding: 0.3em 2em;
+    border-radius: 7%;
+    
+}
+#btnBuscar
+{
+    background:#ffffff;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1em;
+    
+}
