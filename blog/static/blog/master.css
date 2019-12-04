@@ -28,7 +28,7 @@ nav ul li a
 }
 .links:hover
 {
-    background-color: #aaaaaa;
+    background-color: rgb(78, 123, 175);
 }
 
 .barra
@@ -44,7 +44,7 @@ nav ul li a
 .buscar
 {
     padding: 1em;
-    margin-bottom: 6em;
+    margin-bottom: 5.64em;
 }
 #txtBuscar
 {
