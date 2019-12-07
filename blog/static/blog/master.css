@@ -8,6 +8,7 @@
 nav
 {
     background: rgb(54, 90, 131);
+    padding-bottom: 1em;
     
 }
 ul
@@ -19,17 +20,23 @@ nav ul li a
 {
     text-decoration: none;
     color: #ffffff;
+    font-size: 1.4em;
+    padding-bottom: 1em;
+    
 }
 
     .links
 {
-    padding: 1em 3em;
+    padding: 1.75em 3em;
     display: inline;
+    
 }
+
 .links:hover
 {
     background-color: rgb(78, 123, 175);
 }
+
 
 .barra
 {
@@ -40,7 +47,9 @@ nav ul li a
 {
     text-align: end;
     width: 100%;
+    
 }
+
 .buscar
 {
     padding: 1em;
