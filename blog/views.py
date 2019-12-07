@@ -6,5 +6,5 @@ from blog.models import Post
 def homepage(request):
 
     return render(request,
-                  "blog/master.html",
+                  "blog/home.html",
                   {"posts": Post.objects.all})

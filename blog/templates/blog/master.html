@@ -9,12 +9,13 @@
     
     {% load static %}
     <link  href="{% static 'blog/master.css' %}" rel="stylesheet">
+    <link  href="{% static 'blog\bootstrap.min.css' %}" rel="stylesheet">
 
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav class="border-bottom">
                 <ul class="barra">
                     <li>    
                         <a href="master.html"></a>
@@ -25,7 +26,7 @@
                     <ul class="barra2">
                         <li>
                             <form class="buscar">
-                                    <input type="text" name="buscar" id="txtBuscar">
+                                    <input type="text" name="buscar" id="txtBuscar" >
                                     <input type="button" value="Buscar" id="btnBuscar">
                             </form>
                         </li>
@@ -38,14 +39,14 @@
                     </ul>
                 </ul>
         </nav>
+        <div class="titulo">
+            <h1>Salud, longevidad y opiniones sobre lo cierto y lo incierto en la medicina</h1>
+        </div>
           
-    
-        {% for p in posts %}
+    </header>
+    {% block content %}
+    {% endblock %}
 
-        <p> {{p.titulo}}  </p>
-        <p> {{p.subtitulo}}  </p>
-        <p> {{p.contenido|safe}}  </p>
-
-        {% endfor %}
+      
 </body>
 </html>
