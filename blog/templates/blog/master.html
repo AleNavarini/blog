@@ -10,16 +10,17 @@
     {% load static %}
     <link  href="{% static 'blog/master.css' %}" rel="stylesheet">
     <link  href="{% static 'blog\bootstrap.min.css' %}" rel="stylesheet">
+    <!-- <link  rel="stylesheet" href="{% static 'blog/materialize.min.css' %}"  /> -->
 
 </head>
 
 <body>
     <header>
-        <nav class="border-bottom">
+        <!-- <nav class="border-bottom">
                 <ul class="barra">
                     <li>    
                         <a href="master.html"></a>
-                        <img src="../../static/images/logo.png" alt="Medicina Cierta e Incierta" width="180" height="180">
+                        <img src="../../static/images/logo.png" alt="Medicina Cierta e Incierta" width="100" height="100">
                     </li>
                     
                 
@@ -38,11 +39,43 @@
                         </li>
                     </ul>
                 </ul>
+            
+        </nav> -->
+
+        <nav>
+            <div>
+                <ul>
+                    <li>
+                        <p>MCEI</p>
+                            <!-- <img src="../../static/images/logo.png" alt="Medicina Cierta e Incierta" width="100" height="100"> -->
+                    </li>
+                    <li>
+                        <a href="#">Inicio</a>                 
+                        <a href="#">Articulos</a>
+                        <a href="#">Colaboraciones</a>
+                        <a href="#">Acerca de mi</a>
+                    </li>
+                    <li>
+                        
+                            <input type="text" name="buscar" id="buscar">
+                            <input type="button" value="Buscar">
+                        
+                    </li>
+                </ul>
+            </div>
         </nav>
+
         <div class="titulo">
             <h1>Salud, longevidad y opiniones sobre lo cierto y lo incierto en la medicina</h1>
         </div>
-          
+        <div class="fondo">
+            <blockquote>
+                El arte de la medicina consiste en entretener al paciente
+                mientras la naturaleza cura la enfermedad.
+                                Voltaire
+            </blockquote>
+
+        </div>
     </header>
     {% block content %}
     {% endblock %}
