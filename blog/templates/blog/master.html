@@ -8,62 +8,41 @@
     <title>Inicio</title> 
     
     {% load static %}
+    <link  href="{% static 'blog/style.css' %}" rel="stylesheet">
     <link  href="{% static 'blog/master.css' %}" rel="stylesheet">
-    <link  href="{% static 'blog\bootstrap.min.css' %}" rel="stylesheet">
-    <!-- <link  rel="stylesheet" href="{% static 'blog/materialize.min.css' %}"  /> -->
+    
+    
+    
 
 </head>
 
 <body>
     <header>
-        <!-- <nav class="border-bottom">
-                <ul class="barra">
-                    <li>    
-                        <a href="master.html"></a>
-                        <img src="../../static/images/logo.png" alt="Medicina Cierta e Incierta" width="100" height="100">
-                    </li>
-                    
-                
-                    <ul class="barra2">
-                        <li>
-                            <form class="buscar">
-                                    <input type="text" name="buscar" id="txtBuscar" >
-                                    <input type="button" value="Buscar" id="btnBuscar">
-                            </form>
-                        </li>
-                        <li class = "lnkList">
-                            <li class="links"><a href="#">Inicio</a></li>
-                            <li class="links"><a href="#">Articulos</a></li>
-                            <li class="links"><a href="#">Colaboraciones</a></li>
-                            <li class="links"><a href="#">Acerca de Mi</a></li>
-                        </li>
-                    </ul>
-                </ul>
-            
-        </nav> -->
+        
 
-        <nav>
-            <div>
+        <nav class="mynav">
                 <ul>
                     <li>
-                        <p>MCEI</p>
-                            <!-- <img src="../../static/images/logo.png" alt="Medicina Cierta e Incierta" width="100" height="100"> -->
+                       <a href="#">
+                            <img src="../../static/images/logo.png" alt="MCEI" width="90" height="90">
+                        </a>
                     </li>
-                    <li>
-                        <a href="#">Inicio</a>                 
-                        <a href="#">Articulos</a>
-                        <a href="#">Colaboraciones</a>
-                        <a href="#">Acerca de mi</a>
-                    </li>
-                    <li>
+                    <li class="links">
                         
-                            <input type="text" name="buscar" id="buscar">
-                            <input type="button" value="Buscar">
-                        
+                            <a href="#" class="lnk">Inicio</a>
+                            <a href="#" class="lnk">Articulos</a>
+                            <a href="#" class="lnk">Colaboraciones</a>
+                            <a href="#" class="lnk">Acerca de mi</a>
+                            
                     </li>
+                               
                 </ul>
-            </div>
+                <form action="#" method="get">
+                    <input type="text" name="txtBuscar" id="txtBuscar">
+                    <input type="submit" value="Buscar" class="btnBuscar">
+                </form>
         </nav>
+            
 
         <div class="titulo">
             <h1>Salud, longevidad y opiniones sobre lo cierto y lo incierto en la medicina</h1>
