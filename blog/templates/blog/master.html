@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
-    <title>Inicio</title> 
-    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inicio</title>
+
     {% load static %}
-    <link  href="{% static 'blog/style.css' %}" rel="stylesheet">
-    <link  href="{% static 'blog/master.css' %}" rel="stylesheet">
+    <link href="{% static 'blog/style.css' %}" rel="stylesheet">
+    <link href="{% static 'blog/master.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'blog/bootstrap.min.css' %}">
-    
-     
-    
+
+
+
 
 </head>
 
 <body>
     <header>
-        
+
 
         <nav class="mynav">
-                <ul >
-                    <li >
-                       <a href="#">
-                            <img src="../../static/images/logo.png" alt="MCEI" width="90" height="90">
-                        </a>
-                    </li>
-                    <li class=" links">
-                        
-                            <a href="#" class="lnk">Inicio</a>
-                            <a href="#" class="lnk">Articulos</a>
-                            <a href="#" class="lnk">Colaboraciones</a>
-                            <a href="#" class="lnk">Acerca de mi</a>
-                            
-                    </li>
-                               
-                </ul>
-                <form action="#" method="get">
-                    <input type="text" name="txtBuscar" id="txtBuscar">
-                    <input type="submit" value="Buscar" class="btnBuscar">
-                </form>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="../../static/images/logo.png" alt="MCEI" width="90" height="90">
+                    </a>
+                </li>
+                <li class=" links">
+
+                    <a href="/" class="lnk">Inicio</a>
+                    <a href="/articulos" class="lnk">Articulos</a>
+                    <a href="/colaboraciones" class="lnk">Colaboraciones</a>
+                    <a href="/bio" class="lnk">Acerca de mi</a>
+
+                </li>
+
+            </ul>
+            <form action="" method="get">
+                <input type="text" name="search" id="search">
+                <input type="submit" value="Buscar" class="btnBuscar">
+            </form>
         </nav>
-            
+
 
         <div class="titulo">
             <h3>Salud, longevidad y opiniones sobre lo cierto y lo incierto en la medicina</h3>
@@ -63,6 +64,7 @@
     </section>
     <footer>
         <p> © Derechos Reservados MCEI, 2019 </p>
-    </footer>  
+    </footer>
 </body>
+
 </html>

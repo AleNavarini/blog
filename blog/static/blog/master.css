@@ -29,15 +29,16 @@ body,html{
 }
 
 .contenedor{
+    margin-top: 4em;
     display: flex;
-    width: 60%;
+    width: 65%;
     position: relative;
-    left: 20%;
+    left: 1%;
     flex-flow: wrap;
 }
 
 .card{
-    margin-left: 4em;
+    margin-left: 7em;
     margin-bottom: 2em;
 }
 
@@ -47,4 +48,20 @@ footer{
     text-align: center;
     min-height: 100%;
     bottom: -2em;
+}
+
+.bio{
+    width: 30em;
+    text-align: justify;
+    margin-left: 20%;
+     
+}
+
+.fotobio{
+    margin-left: 10em;
+
+
+}
+.biografiaContenedor{
+    display: flex;
 }
