@@ -10,8 +10,9 @@
     {% load static %}
     <link  href="{% static 'blog/style.css' %}" rel="stylesheet">
     <link  href="{% static 'blog/master.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'blog/bootstrap.min.css' %}">
     
-    
+     
     
 
 </head>
@@ -21,13 +22,13 @@
         
 
         <nav class="mynav">
-                <ul>
-                    <li>
+                <ul >
+                    <li >
                        <a href="#">
                             <img src="../../static/images/logo.png" alt="MCEI" width="90" height="90">
                         </a>
                     </li>
-                    <li class="links">
+                    <li class=" links">
                         
                             <a href="#" class="lnk">Inicio</a>
                             <a href="#" class="lnk">Articulos</a>
@@ -45,20 +46,23 @@
             
 
         <div class="titulo">
-            <h1>Salud, longevidad y opiniones sobre lo cierto y lo incierto en la medicina</h1>
+            <h3>Salud, longevidad y opiniones sobre lo cierto y lo incierto en la medicina</h3>
         </div>
         <div class="fondo">
-            <blockquote>
-                El arte de la medicina consiste en entretener al paciente
-                mientras la naturaleza cura la enfermedad.
-                                Voltaire
-            </blockquote>
+            <pre class="pre">
+    El arte de la medicina consiste en entretener al paciente
+    mientras la naturaleza cura la enfermedad.
+                            -Voltaire
+            </pre>
 
         </div>
     </header>
-    {% block content %}
-    {% endblock %}
-
-      
+    <section>
+        {% block content %}
+        {% endblock %}
+    </section>
+    <footer>
+        <p> © Derechos Reservados MCEI, 2019 </p>
+    </footer>  
 </body>
 </html>

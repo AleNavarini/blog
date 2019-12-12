@@ -2,19 +2,19 @@
 
 
 {% block content %}
-
+  <div class="contenedor">
     {% for p in posts %}
     <div class="card " style="width: 18rem;">
-            <img src="../../static/images/conoc.jpg" class="card-img-top" alt="...">
+            <img src="{{p.foto.url}}" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title">{{ p.titulo }}</h5>
+              <p class="card-text">{{ p.subtitulo |safe }}</p>
+              <a href="#" class="btn btn-primary">Leer Mas</a>
             </div>
     </div>
 
     {% endfor %}
-
+  </div>
 
 
 {% endblock %}

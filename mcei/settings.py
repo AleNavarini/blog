@@ -152,3 +152,6 @@ TINYMCE_DEFAULT_CONFIG = {
     'menubar': True,
     'statusbar': True,
     }
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = 'media'

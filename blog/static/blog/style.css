@@ -9,46 +9,47 @@
     display: flex;
     background-color: rgba(31, 71, 117, 1);
     width: 100%;
+    
 }
-ul li
+.mynav ul li
 {
     display: inline;
     padding: 0 4em;
 }
-form
+.mynav form
 {
     position: absolute;
     right: 1em;
     top: 2.4em;
 }
-#txtBuscar
+.mynav #txtBuscar
 {
     padding: 0.2em 2em;
-    background-color: ;
+    background-color: white;
 }
-ul li a
+.mynav ul li a
 {
     color: #ffffff;
     text-decoration: none;
     font-size: 1.3em;
     font-weight: 1;
 }
-.links
+.mynav .links
 {
  position: absolute;
  top: 2.4em;
  left: 40%;
 
 }
-.lnk
+.mynav .lnk
 {
-    padding: 2.4em 1em 1.55em 1em;
+    padding: 2.4em 1em 1.93em 1em;
 }
-.lnk:hover
+.mynav .lnk:hover
 {
     background-color: rgb(46, 110, 182);
 }
-.btnBuscar
+.mynav .btnBuscar
 {
     border: none;
     padding: 0.3em 0.8em;

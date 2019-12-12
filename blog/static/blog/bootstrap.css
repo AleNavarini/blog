@@ -173,7 +173,7 @@ a:not([href]):hover {
   text-decoration: none;
 }
 
-pre,
+/* pre, */
 code,
 kbd,
 samp {
@@ -181,11 +181,11 @@ samp {
   font-size: 1em;
 }
 
-pre {
+/* pre {
   margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto;
-}
+} */
 
 figure {
   margin: 0 0 1rem;
@@ -523,12 +523,12 @@ kbd kbd {
   font-size: 100%;
   font-weight: 700;
 }
-
+/* 
 pre {
   display: block;
   font-size: 87.5%;
   color: #212529;
-}
+} */
 
 pre code {
   font-size: inherit;

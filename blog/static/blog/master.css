@@ -1,4 +1,6 @@
-
+body,html{
+    min-height: 100%;
+}
 
 .titulo
 {
@@ -10,14 +12,39 @@
 
 .fondo
 {
-    padding: 2em;
-    background-image: url(../images/fondo2.jpg);
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-color: white;
-    font-size: 4em;
+   width: 100%;
+   padding: 0;
+   margin: 0;
+   background-image: url(../images/fondou.jpg);
+   color: #ffffff;
+   font-size: 3em;
+       
+}
+.pre
+{
     color: #ffffff;
-    font-weight: bold;
-    
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.contenedor{
+    display: flex;
+    width: 60%;
+    position: relative;
+    left: 20%;
+    flex-flow: wrap;
+}
+
+.card{
+    margin-left: 4em;
+    margin-bottom: 2em;
+}
+
+footer{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    min-height: 100%;
+    bottom: -2em;
 }
