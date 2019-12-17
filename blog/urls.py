@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include, re_path
 from . import views
+from django.conf.urls import url
 
 app_name = "blog"
 
@@ -24,7 +25,7 @@ urlpatterns = [
     re_path("bio/", views.bio, name = "bio"),
     re_path("colaboraciones/", views.colaboraciones, name = "colab"),
     re_path("articulos/", views.articulos, name = "articulos"),
-    re_path('busca/$',views.buscaArticulos, name = 'buscaArticulos'),
-
+    re_path(r'search/$' , views.search ,name= "search"),
+ 
     
 ]

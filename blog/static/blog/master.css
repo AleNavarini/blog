@@ -65,3 +65,10 @@ footer{
 .biografiaContenedor{
     display: flex;
 }
+
+.mostpopular{
+    background: #b1aeae;
+    position: absolute;
+    right: 1em;
+
+}
