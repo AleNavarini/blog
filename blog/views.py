@@ -40,3 +40,10 @@ def search(request):
 	posts = posts.order_by('-fecha')
 
 	return render(request, "blog/home.html" , context = { "posts" : posts } )
+
+def post(request):
+    
+	postid = request.GET.get('post')
+	post = Post.objects.get(pk = postid)
+
+	return render(request, "blog/articulo.html", context = {"post": post})
