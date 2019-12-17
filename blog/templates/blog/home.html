@@ -2,28 +2,28 @@
 
 
 {% block content %}
-<div>
-  <div class="contenedor">
-    {% for p in posts %}
-    <div class="card " style="width: 18rem;">
-      <img src="{{p.foto.url}}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{ p.titulo }}</h5>
-        <p class="card-text">{{ p.subtitulo |safe }}</p>
-        <a href="#" class="btn btn-primary">Leer Mas</a>
+
+    <div class="contenedor">
+      {% for p in posts %}
+      <div class="card " style="width: 18rem;">
+        <img src="{{p.foto.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ p.titulo }}</h5>
+          <p class="card-text">{{ p.subtitulo |safe }}</p>
+          <a href="#" class="btn btn-primary">Leer Mas</a>
+        </div>
       </div>
+
+      {% endfor %}
+  
+    
+    <div class="mostpopular border rounded">
+      <h5>Mas Vistos:</h5><br>
+      {% for mp in mostpopular %}
+
+      <a href="#"><p>{{ mp.titulo }}</p></a>
+      {% endfor%}
     </div>
 
-    {% endfor %}
-
-
   </div>
-  <div class="mostpopular">
-    {% for mp in mostpopular %}
-    <p>{{ mp.titulo }}</p>
-    {% endfor%}
-  </div>
-</div>
-
-
-{% endblock %}
+  {% endblock %}
