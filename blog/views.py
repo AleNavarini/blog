@@ -1,17 +1,24 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.db import models
-from blog.models import Post
+from blog.models import Post, PageCounter
+
 from django.db.models import Q
 
+counter = 0
+
 def homepage(request):
+    pageCounter= PageCounter.objects.all()[0]
+    pageCounter.counter += 1
+    pageCounter.save()
     posts = Post.objects.all
    
-    posts = Post.objects.filter().order_by('-id')[:6]
+    posts = Post.objects.filter().order_by('-id')[:3]
     return render(request,
                   "blog/home.html",
                   {"posts": posts,
-                   "mostpopular" : posts})
+                   "mostpopular" : posts,
+                   "counter":pageCounter})
 
 def bio(request):
 
@@ -25,10 +32,12 @@ def colaboraciones(request):
                   )
 
 def articulos(request):
-
+    posts = Post.objects.all
+   
+    posts = Post.objects.filter().order_by('-id')
     return render(request,
-                  "blog/home.html",
-                  {"posts": Post.objects.all})
+                  "blog/articulos.html",
+                  {"posts": posts})
 
 def search(request):
     

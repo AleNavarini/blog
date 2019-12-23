@@ -24,7 +24,7 @@
 }
 .mynav #txtBuscar
 {
-    padding: 0.2em 2em;
+    padding: 0.2em 3em;
     background-color: white;
 }
 .mynav ul li a
@@ -55,4 +55,9 @@
     padding: 0.3em 0.8em;
     background-color: rgba(31, 71, 117, 1);
     color: #ffffff;
+}
+
+#search{
+    padding-left: 0.6em;
+    padding-right: 0.6em;
 }
