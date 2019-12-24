@@ -3,30 +3,36 @@
 
 {% block content %}
 
-    <div class="contenedor">
-      {% for p in posts %}
-      <div class="card " style="width: 18rem;">
-        <img src="{{p.foto.url}}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{ p.titulo }}</h5>
-          <p class="card-text">{{ p.subtitulo |safe }}</p>
-          <form action = "/posts/" method="GET">
-              <button class = "btn btn-primary" type="submit" name="post" value="{{p.id}}">Leer Mas</button>
-          </form>
-        </div>
-      </div>
-
-      {% endfor %}
-  
-    
-    <div class="mostpopular border rounded">
-      <p> Contador de Visitas: <h3><strong>{{counter.counter}}</strong></h3></p>
-      <h5>Mas Vistos:</h5><br>
-      {% for mp in mostpopular %}
-
-      <a href="#"><p>{{ mp.titulo }}</p></a>
-      {% endfor%}
+<div class="contenedor">
+  {% for p in posts %}
+  <div class="card " style="width: 18rem;">
+    <img src="{{p.foto.url}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ p.titulo }}</h5>
+      <p class="card-text">{{ p.subtitulo |safe }}</p>
+      <form action="/posts/" method="GET">
+        <button class="btn btn-primary" type="submit" name="post" value="{{p.id}}">Leer Mas</button>
+      </form>
     </div>
+  </div>
+
+  {% endfor %}
+
+
+  <div class="mostpopular border rounded">
+    <p> Contador de Visitas: <h3><strong>{{counter.counter}}</strong></h3>
+    </p>
+    <h5>Mas Vistos:</h5><br>
+
+    {% for mp in mostpopular %}
+
+    <form action="/posts/" method="GET">
+      <button class="boton" type="submit" name="post" value="{{mp.id}}">{{ mp.titulo }}</button>
+    </form>
+
+    {% endfor%}
 
   </div>
-  {% endblock %}
+
+</div>
+{% endblock %}

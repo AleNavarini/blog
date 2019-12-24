@@ -2,9 +2,9 @@
 {% block content %}
 
 <div class="contenedorArt">
-    {% for p in posts %}
-    
-<div class="card mb-3" style="max-width: 70%;min-width: 70%;">
+  {% for p in posts %}
+
+  <div class="card mb-3" style="max-width: 70%;min-width: 70%;">
     <div class="row no-gutters">
       <div class="col-md-4">
         <img src="{{p.foto.url}}" class="card-img" alt="...">
@@ -13,15 +13,15 @@
         <div class="card-body">
           <h5 class="card-title">{{ p.titulo }}</h5>
           <p class="card-text">{{ p.subtitulo |safe }}</p>
-          <form action = "/posts/" method="GET">
-            <button class = "btn btn-primary" type="submit" name="post" value="{{p.id}}">Leer Mas</button>
-        </form>
+          <form action="/posts/" method="GET">
+            <button class="btn btn-primary" type="submit" name="post" value="{{p.id}}">Leer Mas</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
 
 
-    {% endfor %}
+  {% endfor %}
 </div>
-    {% endblock %}
+{% endblock %}

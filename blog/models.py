@@ -10,7 +10,7 @@ class Post(models.Model):
     fecha = models.DateTimeField("Fecha de Publicacion", default = datetime.now() )
     
     foto = models.ImageField(blank = True, null = True)
-    viewCounter = models.IntegerField(blank = True, null = True)
+    viewCounter = models.IntegerField(blank = True, null = True, default = 0)
 
     def __str__(self):
         return self.titulo
