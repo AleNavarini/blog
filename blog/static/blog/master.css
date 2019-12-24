@@ -20,6 +20,31 @@ body,html{
    font-size: 3em;
        
 }
+
+.logoFondo{
+    position: relative;
+    left: 1em;
+    top: -1em;
+    width: 160px;
+    height: 160px;
+    background-image: url(../images/logoIni.png);
+    
+    
+    
+}
+
+.logoFondo:hover{
+    transition-duration: 0.3s;
+    position: relative;
+    left: 1em;
+    top: -1em;
+    width: 160px;
+    height: 160px;
+    background-image: url(../images/logoFin.png);   
+    
+    
+}
+
 .pre
 {
     color: #ffffff;
@@ -93,3 +118,5 @@ footer{
     left: 15%;
     
 }
+
+
