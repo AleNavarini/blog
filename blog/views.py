@@ -14,10 +14,11 @@ def homepage(request):
     posts = Post.objects.all
    
     posts = Post.objects.filter().order_by('-id')[:3]
+    postsPopular = Post.objects.filter().order_by('-viewCounter')[:3]
     return render(request,
                   "blog/home.html",
                   {"posts": posts,
-                   "mostpopular" : posts,
+                   "mostpopular" : postsPopular,
                    "counter":pageCounter})
 
 def bio(request):
@@ -52,7 +53,9 @@ def search(request):
 
 def post(request):
     
-	postid = request.GET.get('post')
-	post = Post.objects.get(pk = postid)
+    postid = request.GET.get('post')
+    post = Post.objects.get(pk = postid)
+    post.viewCounter += 1
+    post.save()
 
-	return render(request, "blog/articulo.html", context = {"post": post})
+    return render(request, "blog/articulo.html", context = {"post": post})

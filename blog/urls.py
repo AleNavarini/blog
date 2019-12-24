@@ -26,7 +26,7 @@ urlpatterns = [
     re_path("colaboraciones/", views.colaboraciones, name = "colab"),
     re_path("articulos/", views.articulos, name = "articulos"),
     re_path(r'search/$' , views.search ,name= "search"),
-    re_path(r'post/$',views.post, name = 'post'),
+    re_path(r'posts/$',views.post, name = 'post'),
  
     
 ]

@@ -10,7 +10,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ p.titulo }}</h5>
           <p class="card-text">{{ p.subtitulo |safe }}</p>
-          <form action = "/post/" method="GET">
+          <form action = "/posts/" method="GET">
               <button class = "btn btn-primary" type="submit" name="post" value="{{p.id}}">Leer Mas</button>
           </form>
         </div>
@@ -20,7 +20,7 @@
   
     
     <div class="mostpopular border rounded">
-      <p> Contador de Visitas: {{counter.counter}}</p>
+      <p> Contador de Visitas: <h3><strong>{{counter.counter}}</strong></h3></p>
       <h5>Mas Vistos:</h5><br>
       {% for mp in mostpopular %}
 
