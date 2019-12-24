@@ -42,14 +42,20 @@ def articulos(request):
 
 def search(request):
     
-	search = request.GET.get('search')
-	if search == '':
-		return homepage(request)	
+    search = request.GET.get('search')
+    if search == '':
+        return homepage(request)	
 
-	posts = Post.objects.filter(Q(contenido__contains = search) | Q(titulo__contains = search) | Q(subtitulo__contains = search) | Q(fecha__contains = search) | Q(autor__contains = search))
-	posts = posts.order_by('-fecha')
+    posts = Post.objects.filter(Q(contenido__contains = search) | Q(titulo__contains = search) | Q(subtitulo__contains = search) | Q(fecha__contains = search) | Q(autor__contains = search))
+    posts = posts.order_by('-fecha')
+    postsPopular = Post.objects.filter().order_by('-viewCounter')[:3]
+    pageCounter= PageCounter.objects.all()[0]
 
-	return render(request, "blog/home.html" , context = { "posts" : posts } )
+    return render(request,
+                "blog/home.html",
+                {"posts": posts,
+                "mostpopular" : postsPopular,
+                "counter":pageCounter})
 
 def post(request):
     
