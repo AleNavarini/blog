@@ -6,8 +6,30 @@ body,html{
 {
     width: 100%;
     text-align: center;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,248,248,1) 7%, rgba(190,190,190,1) 100%);
-    padding: 0.8em;
+    background-image: url(../images/fondoTitulo.jpg);
+    padding: 3em;
+    height: 20em;
+}
+
+.tituloh3{
+    font-size: 3.5em;
+    color: white;
+    position: relative;
+    top: 1em;
+    letter-spacing: 3.2px;
+    font-weight: 900;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    
+    
+}
+.subtituloh6 {
+    font-size: 2.5em;
+    color: white;
+    position: relative;
+    top: 1.4em;
+    letter-spacing: 3.2px;
+    font-weight: 700;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .fondo
@@ -34,7 +56,7 @@ body,html{
 }
 
 .logoFondo:hover{
-    transition-duration: 0.3s;
+    transition-duration: 0.15s;
     position: relative;
     left: 1em;
     top: -1em;
