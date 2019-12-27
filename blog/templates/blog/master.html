@@ -6,12 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Inicio</title>
+    <meta name="description" content="Lo cierto e incierto en la medicina. Este es un blog de medicina.">
+    <title>Medicina Cierta e Incierta</title>
 
     {% load static %}
     <link href="{% static 'blog/style.css' %}" rel="stylesheet">
     <link href="{% static 'blog/master.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'blog/bootstrap.min.css' %}">
+    <script src="{% static 'blog/bootstrap.min.js' %}"></script>
+    
 
 
 
@@ -44,10 +47,13 @@
                 </li>
 
             </ul>
+
             <form action="/search/" method="get">
                 <input type="text" name="search" id="search" placeholder="Busca contenido, autor, etc ..">
-                <input type="image" src="../../static/images/search.png" alt="Submit Form" width="35" height="35" style="padding-top: 0.2em;margin-left: 0.5em;margin-right: 1em;"/>
+                <input type="image" src="../../static/images/search.png" alt="Submit Form" width="35" height="35"
+                    style="padding-top: 0.2em;margin-left: 0.5em;margin-right: 1em;" />
             </form>
+
         </nav>
 
 
