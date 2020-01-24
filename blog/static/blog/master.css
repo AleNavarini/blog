@@ -107,14 +107,17 @@ footer{
 }
 
 .bio{
-    width: 30em;
+    width: 50em;
     text-align: justify;
-    margin-left: 20%;
+    margin-left: 10%;
      
 }
 
 .fotobio{
     margin-left: 10em;
+    width: 635px;
+    height: 590px;
+    
 
 
 }
