@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&#bnbk*n3)4*#p!k*_va$ljd-h6d18c-q=yl=^b_s2$^lnhc9n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['64.225.122.225']
 
@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'mcei.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'mcei',
+        'USER': 'alenavarini',
+        'PASSWORD': 'soldier99071241',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -121,7 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 
 TINYMCE_DEFAULT_CONFIG = {
