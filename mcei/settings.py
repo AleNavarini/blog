@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'mcei.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mcei',
+        'NAME': 'mceidb',
         'USER': 'alenavarini',
         'PASSWORD': 'soldier99071241',
         'HOST': 'localhost',
