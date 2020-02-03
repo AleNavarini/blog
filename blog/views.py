@@ -29,7 +29,7 @@ def bio(request):
 def colaboraciones(request):
 
     return render(request,
-                  "blog/colab.html",
+                  "blog/sobreEsteBlog.html",
                   )
 
 def articulos(request):
