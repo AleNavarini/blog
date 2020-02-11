@@ -17,3 +17,7 @@ class Post(models.Model):
 
 class PageCounter(models.Model):
     counter = models.IntegerField()
+
+class CarrImage(models.Model):
+    image = models.ImageField(blank = True, null = True)
+    desc_alternativa = models.CharField(max_length = 200)
