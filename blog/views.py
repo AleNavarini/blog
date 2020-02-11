@@ -27,9 +27,7 @@ def bio(request):
                   "blog/bio.html")
 
 def sobreEsteBlog(request):
-
-    return render(request,
-                  "blog/sobreEsteBlog.html")
+    return render(request,"blog/sobreEsteBlog.html")
 
 def articulos(request):
     posts = Post.objects.all
