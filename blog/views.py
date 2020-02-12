@@ -26,7 +26,7 @@ def bio(request):
     return render(request,
                   "blog/bio.html")
 
-def sobreEsteBlog(request):
+def sobre(request):
     return render(request,"blog/sobreEsteBlog.html")
 
 def articulos(request):
