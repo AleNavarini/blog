@@ -26,8 +26,6 @@ def bio(request):
     return render(request,
                   "blog/bio.html")
 
-def sobre(request):
-    return render(request,"blog/sobreEsteBlog.html")
 
 def articulos(request):
     posts = Post.objects.all
@@ -62,3 +60,6 @@ def post(request):
     post.save()
 
     return render(request, "blog/articulo.html", context = {"post": post})
+
+def sobre(request):
+    return render(request, "blog/sobre.html")
