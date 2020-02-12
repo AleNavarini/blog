@@ -149,13 +149,13 @@ footer{
     
 }
 .contador{
-    border: 4px outset #000000;
+    border: 4px outset #a59e9e;
     border-radius: 28px;
     margin-bottom: 1.6em;
     margin-top: 2em;
-    width: 50%;
+    width: 90%;
     position: relative;
-    left: 25%;
+    left: 5%;
     padding-top: 1em;
     
 }
