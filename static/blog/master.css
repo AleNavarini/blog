@@ -6,7 +6,8 @@ body,html{
 {
     width: 100%;
     text-align: center;
-    background-image: url(../images/fotoFondo.jpg); 
+    background-image: url(../images/fotoFondo.jpg) ; 
+    background-repeat: no-repeat;
     padding: 4em;
     height: 20em;
 }
