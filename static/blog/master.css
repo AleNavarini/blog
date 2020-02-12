@@ -119,8 +119,8 @@ footer{
 
 .fotobio{
     margin-left: 5em;
-    width: 635px;
-    height: 590px;
+    width: fit-content;
+    height:fit-content;
     margin-right: 2em;
     
 
