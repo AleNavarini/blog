@@ -11,7 +11,7 @@ urlpatterns = [
     re_path("articulos/", views.articulos, name = "articulos"),
     re_path(r'search/$' , views.search ,name= "search"),
     re_path(r'posts/$',views.post, name = 'post'),
-    path("sobre/", views.bio ),
+    re_path("bio2/", views.bio, name = "bio"),
  
     
 ]
