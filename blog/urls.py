@@ -7,7 +7,8 @@ app_name = "blog"
 
 urlpatterns = [
     path("", views.homepage, name = "homepage"),
-    re_path("bio/", views.sobre, name = "bio"),
+    re_path("bio/", views.bio, name = "bio"),
+    re_path("sobre/", views.sobre, name = "sobre"),
     re_path("articulos/", views.articulos, name = "articulos"),
     re_path(r'search/$' , views.search ,name= "search"),
     re_path(r'posts/$',views.post, name = 'post'),
