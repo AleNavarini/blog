@@ -6,9 +6,9 @@ body,html{
 {
     width: 100%;
     text-align: center;
-    background-image: url(../images/fondoNuevo.jpg); 
+    background-image: url(../images/fotoFondo.jpg); 
     padding: 4em;
-    height: 24em;
+    height: 20em;
 }
 
 .tituloh3{
