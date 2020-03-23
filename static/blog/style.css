@@ -74,15 +74,8 @@
     color: rgb(76, 76, 228);
 
 }
-.logo{
-    margin-top: 0.2em;
 
-}
-.logo:hover{
-    transition-duration: 0.4s;
-    
-    
-}
+
 .sobre{
     position: relative;
     width: 80%;
