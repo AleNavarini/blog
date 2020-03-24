@@ -101,19 +101,19 @@ footer{
 }
 
 .bio{
-    width: auto;
+    width: 40%;
     min-width: 30em;
     text-align: justify;
     margin-left: 10%;
-    font:Arial; color: #103e73; font-size: 1.4em;
+    font:Arial; color: #103e73; font-size: 1em;
      
 }
 
 .fotobio{
     margin-left: 5em;    
     margin-right: 2em;
-    width: 600px;
-    height: 800px;   
+    width: 60%;
+    height: auto;   
 
 
 }
