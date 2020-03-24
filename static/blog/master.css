@@ -113,7 +113,8 @@ footer{
     margin-left: 5em;    
     margin-right: 2em;
     width: 600px;
-    height: 800px;   
+    height: 800px; 
+    overflow: hidden;  
 
 
 }
