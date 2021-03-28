@@ -1,0 +1,252 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif; 
+}
+
+body,html{
+    min-height: 100%;
+}
+
+.titulo
+{
+    width: 100%;
+    text-align: center;
+    background-image: url(../images/fotoFondo.jpg) ; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 4em;
+    height: 20em;
+}
+
+.tituloh3{
+    font-size: 3.5em;
+    color: #ffffff;
+    position: relative;
+    top: 1em;
+    letter-spacing: 3.2px;
+    font-weight: 900;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    
+    
+}
+.subtituloh6 {
+    font-size: 2.5em;
+    color: #ffffff;
+    position: relative;
+    top: 1.4em;
+    letter-spacing: 3.2px;
+    font-weight: 700;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding-bottom: 1.2em;
+}
+
+.fondo
+{
+   width: 100%;
+   padding: 0;
+   margin: 0;
+   background-image: url(../images/fondo.jpg);
+   color: #ffffff;
+   font-size: 3em;
+       
+}
+
+.logoFondo{
+    position: relative;
+    left: 1em;
+    top: 0em;
+    width: 160px;
+    height: 160px;
+    background-image: url(../images/logoIni.png);
+    background-repeat: no-repeat;
+    
+        
+}
+
+
+
+.pre
+{
+    color: #ffffff;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.contenedor{
+    margin-top: 4em;
+    display: flex;
+    width: 80%;
+    position: relative;
+    left: 1%;
+    flex-flow: wrap;
+}
+.contenedorArt{
+    margin-top: 4em;
+    display: flex;
+    width: 80%;
+    position: relative;
+    left: 15%;
+    flex-flow: wrap;
+    
+}
+
+.card{
+    margin-left: 7em;
+    margin-bottom: 2em;
+}
+
+footer{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    min-height: 100%;
+    bottom: -2em;
+}
+
+.bio{
+    width: 40%;
+    min-width: 30em;
+    text-align: justify;
+    margin-left: 10%;
+    font:Arial; color: #103e73; font-size: 1em;
+     
+}
+
+.fotobio{
+    margin-left: 5em;    
+    margin-right: 2em;
+    width: 600px;
+    height: 800px; 
+    overflow: hidden;  
+
+
+}
+.biografiaContenedor{
+    display: flex;
+}
+
+.mostpopular{
+    background: #f3ecec;
+    position: absolute;
+    top: 0;
+    right: -23.75%;
+    padding: 0.4em;
+    width: 30%;
+    text-align: center; 
+    margin-left: 2em;  
+    
+    
+
+}
+.textArticulo{
+    width: 70%;
+    position: relative;
+    left: 15%;
+    
+}
+.contador{
+    border: 4px outset rgba(56, 55, 55, 0.425);
+    border-radius: 28px;
+    margin-bottom: 1.6em;
+    margin-top: 2em;
+    width: 90%;
+    position: relative;
+    left: 5%;
+    padding-top: 1em;
+    
+}
+.fotoFrase{
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+.mynav
+{
+    display: flex;
+    background-color: rgba(31, 71, 117, 1);
+    width: 100%;
+    height: 10em;
+    
+}
+.mynav ul li
+{
+    display: inline;
+    padding: 0 4em;
+}
+.mynav form
+{
+    position: absolute;
+    right: 1em;
+    top: 3.4em;
+}
+.mynav #txtBuscar
+{
+    padding: 0.8em 3em;
+    background-color: white;
+}
+.mynav ul li a
+{
+    display: block;
+    height: inherit;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 1;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+.mynav .links
+{
+ position: relative;
+ top: -6.2em;
+ left: 10%;
+ font-size: 20px;
+
+}
+
+.mynav .lnk:hover
+{
+    transition-duration: 0.3s;
+
+    background-color: rgb(46, 110, 182);
+}
+.mynav .btnBuscar
+{
+    border: none;
+    padding: 0.3em 0.8em;
+    background-color: rgba(31, 71, 117, 1);
+    color: #ffffff;
+}
+
+#search{
+    position: relative;
+    top: -0.3em;
+    padding: 0.5em 0.6em;
+    
+}
+
+.boton{
+    border: none;
+    margin-bottom: 1em;
+    color: rgb(76, 76, 228);
+
+}
+
+
+.sobre{
+    position: relative;
+    width: 80%;
+    text-align: justify;
+    left: 10%;
+    font-size: 1.2em;
+
+}
+
+

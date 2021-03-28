@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&#bnbk*n3)4*#p!k*_va$ljd-h6d18c-q=yl=^b_s2$^lnhc9n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['64.225.45.180', 'mcei.com.ar']
+ALLOWED_HOSTS = []#'64.225.45.180', 'mcei.com.ar']
 
 
 # Application definition
@@ -75,15 +75,22 @@ WSGI_APPLICATION = 'mcei.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
-DATABASES = {
+if not DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'mceidb',
+            'USER': 'alenavarini',
+            'PASSWORD': 'soldier99071241',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+    }
+else:
+    DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mceidb',
-        'USER': 'alenavarini',
-        'PASSWORD': 'soldier99071241',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -118,14 +125,17 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = True   
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#static
+
+
 
 
 TINYMCE_DEFAULT_CONFIG = {
