@@ -14,6 +14,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.titulo
+    
+    def getYear(self):
+        return fecha.year
 
 class PageCounter(models.Model):
     counter = models.IntegerField()

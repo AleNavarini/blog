@@ -12,7 +12,7 @@
             <img src="{{p.foto.url}}" class="card-img-top" alt="..." width="500" height="auto">
             <div class="card-body">
               <h5 class="card-title" style="color: #103e73;">{{ p.titulo }}</h5>
-              <p class="card-text">{{ p.subtitulo |safe }}</p>
+              <p class="card-text">{{ p.subtitulo|truncatechars:":50"|safe }}</p>
               <form action="/posts/" method="GET">
                 <button class="btn btn-primary" type="submit" name="post" value="{{p.id}}">Leer Mas</button>
               </form>
@@ -23,7 +23,7 @@
       </ul>
     </div>
     <div class="col-3">
-      <div class="mostpopular rounded-left">
+      <div class="border rounded-left">
         <div class="contador">
           <p style="font-size: 1.2em; display: contents;">
               Contador de Visitas: <h3><strong>{{counter.counter}}</strong></h3>
@@ -40,8 +40,14 @@
         {% endfor%}
 
         <h5>Posts por año:</h5>
-
-
+        {% for p in postsByYear %}
+          <h4> {{p.year}} </h4>
+          {% for py in p.posts %}
+          <form action="/posts/" method="GET">
+            <button class="boton" type="submit" name="post" value="{{py.id}}">{{ py.titulo }}</button>
+          </form>
+          {% endfor%}
+        {% endfor%}
       </div>
     </div>
   </div>
