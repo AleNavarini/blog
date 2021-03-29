@@ -128,12 +128,8 @@ footer{
 .contador{
     border: 4px outset rgba(56, 55, 55, 0.425);
     border-radius: 28px;
-    margin-bottom: 1.6em;
-    margin-top: 2em;
-    width: 90%;
-    position: relative;
-    left: 5%;
-    padding-top: 1em;
+    
+    
     
 }
 .fotoFrase{
@@ -222,3 +218,11 @@ header a{
     background: rgba(255, 255, 255, 0.7);
 }
 
+.additional-info{
+    margin-bottom: 1.6em;
+    width: 90%;
+    position: relative;
+    left: 5%;
+    padding-top: 1em;
+    text-align: center;
+}
