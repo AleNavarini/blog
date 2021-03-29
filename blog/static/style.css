@@ -187,12 +187,14 @@ header a{
 }
 
 .posts{
-    width: 80%;
+    width: 70%;
     display: flex;
     list-style-type: none;
+    flex-wrap: wrap;
 }
 .posts li{
     max-width: 50%;
+
 }
 
 .boton{
