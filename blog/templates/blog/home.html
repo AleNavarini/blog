@@ -12,7 +12,7 @@
             <img src="{{p.foto.url}}" class="card-img-top post-img" alt="...">
             <div class="card-body">
               <h5 class="card-title" style="color: #103e73;">{{ p.titulo }}</h5>
-              <p class="card-text">{{ p.subtitulo| truncatechars:1200 | safe }}</p>
+              <p class="card-text">{{ p.subtitulo| safe }}</p>
               <form action="/posts/" method="GET">
                 <button class="btn btn-primary" type="submit" name="post" value="{{p.id}}">Leer Mas</button>
               </form>
