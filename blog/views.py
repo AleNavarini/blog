@@ -18,18 +18,19 @@ def homepage(request):
     pageCounter = PageCounter.objects.all()[0]
     pageCounter.counter += 1
     pageCounter.save()
-    posts = Post.objects.all
+    allPosts = Post.objects.filter().order_by('-fecha')
+    years = []
+    for p in allPosts:
+        if p.fecha.year not in years:
+            years.append(p.fecha.year)
    
     posts = Post.objects.filter().order_by('-id')[:3]
     postsPopular = Post.objects.filter().order_by('-viewCounter')[:3]
 
-    years = []
-    for p in posts:
-        if p.fecha.year not in years:
-            years.append(p.fecha.year)
+
     postsByYear = []
     for year in years:
-        postsByYear.append(YearlyPosts(year, [p for p in posts if p.fecha.year == year]))
+        postsByYear.append(YearlyPosts(year, [p for p in allPosts if p.fecha.year == year]))
 
     return render(request,
                   "blog/home.html",
