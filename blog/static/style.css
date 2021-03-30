@@ -229,3 +229,9 @@ header a{
     padding-top: 1em;
     text-align: center;
 }
+.post-img{
+    float: left;
+    width:  300px;
+    height: 300px;
+    object-fit: cover;
+}
