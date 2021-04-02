@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.db import models
-from blog.models import Post, PageCounter
+from blog.models import Post, PageCounter, CarrImage
 
 from django.db.models import Q
 
@@ -32,12 +32,14 @@ def homepage(request):
     for year in years:
         postsByYear.append(YearlyPosts(year, [p for p in allPosts if p.fecha.year == year]))
 
+    carrImages = CarrImage.objects.filter()
     return render(request,
                   "blog/home.html",
                   {"posts": posts,
                    "mostpopular" : postsPopular,
                    "counter":pageCounter,
-                   "postsByYear": postsByYear})
+                   "postsByYear": postsByYear,
+                   "carrImages": carrImages})
 
 def bio(request):
 

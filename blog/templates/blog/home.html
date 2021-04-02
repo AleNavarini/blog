@@ -54,7 +54,7 @@
             <div class="carousel-item active">
               <img src="../../static/images/elArteDeLaMedicina-Voltaire.jpg" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item">
+            <!--<div class="carousel-item">
               <img src="../../static/images/heVivido-Twain.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
@@ -68,7 +68,12 @@
             </div>
             <div class="carousel-item">
               <img src="../../static/images/quienDecide-Pope.jpg" class="d-block w-100" alt="...">
+            </div>-->
+            {% for img in carrImages %}
+            <div class="carousel-item">
+              <img src="{{img.image}}"  class="d-block w-100" alt="{{img.desc_alternativa}}">
             </div>
+            {% endfor %}
           </div>
       </div>
 

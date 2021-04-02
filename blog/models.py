@@ -22,5 +22,5 @@ class PageCounter(models.Model):
     counter = models.IntegerField()
 
 class CarrImage(models.Model):
-    image = models.ImageField(blank = True, null = True)
+    image = models.URLField(default= r"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.formulad.org%2Fes%2Fphotogalleries%2F2017-08-09-gallery-not-found%2F&psig=AOvVaw1sNW9BAEhcHcDtmF-wvnm4&ust=1617411070167000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLis6vir3u8CFQAAAAAdAAAAABAD")
     desc_alternativa = models.CharField(max_length = 200)
