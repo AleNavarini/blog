@@ -146,7 +146,8 @@ header{
 }
 
 header ul{
-    width: 90%;
+    left: 5%;
+    width: 95%;
     height: inherit;
     margin: 0px auto;
 }
@@ -234,4 +235,10 @@ header a{
     width:  300px;
     height: 300px;
     object-fit: cover;
+}
+.login-form{
+    width: 50%;
+    position: relative;
+    left: 25%;
+    text-align: center;
 }

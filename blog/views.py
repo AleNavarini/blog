@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.db import models
 from blog.models import Post, PageCounter, CarrImage
-
 from django.db.models import Q
 
 counter = 0
@@ -83,3 +82,19 @@ def post(request):
 
 def sobre(request):
     return render(request, "blog/sobre.html")
+
+
+def login(request):
+    return render(request, "blog/login.html")
+
+def register(request):
+    return render(request, "blog/register.html")
+
+def validateLogin(request):
+    mail = request.POST.get('mail')
+    password = request.POST.get('password')
+
+
+def createUser(request):
+    return HttpResponse("Registro exitoso")
+

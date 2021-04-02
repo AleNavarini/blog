@@ -35,20 +35,30 @@
                 <li><a href="/bio" class="links">Acerca de mi</a></li>
                 <li>
                     <form action="/search/" method="get">
-                        <div class="input-group mb-3" style="margin-left:2em;">
+                        <div class="input-group mb-3" >
                             <input type="text" class="form-control search-bar" placeholder="Buscar contenido, autor ..."
                                 aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <button class="btn btn-outline-secondary search-button" type="button"
+                            <button class="btn btn-outline-light me-2" style="margin-left: 2px;" type="button"
                                 id="button-addon2">Buscar</button>
                         </div>
                     </form>
+                </li>
+                <li> 
+                    <a href="/login"> 
+                        <button type="button" class="btn btn-outline-light me-2" style="margin-left: 2em;">Login</button>
+                    </a> 
+                </li>
+                <li> 
+                    <a href="/register"> 
+                        <button type="button" class="btn btn-outline-light me-2" style="margin-left:-2.5em;">Registrarse</button>
+                    </a> 
                 </li>
             </ul>
         </nav>
     </header>
     <div class="container-fluid titulo">
         <h3 class="tituloh3">Medicina Cierta e Incierta</h3>
-        <h6 class="subtituloh6">Salud, longevidad y opiniones sobre lo cierto y <br>  lo incierto en la medicina</h6>
+        <h6 class="subtituloh6">Salud, longevidad y opiniones sobre lo cierto y <br> lo incierto en la medicina</h6>
     </div>
 
 
@@ -57,7 +67,7 @@
         {% endblock %}
     </section>
     <footer>
-        <p> © Derechos Reservados MCEI, 2021 </p>
+        <p class="text-muted"> © Derechos Reservados MCEI, 2021 </p>
     </footer>
 </body>
 
