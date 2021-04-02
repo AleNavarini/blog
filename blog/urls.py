@@ -12,8 +12,8 @@ urlpatterns = [
     re_path("articulos/", views.articulos, name = "articulos"),
     re_path(r'search/$' , views.search ,name= "search"),
     re_path(r'posts/$',views.post, name = 'post'),
-    re_path("login/", views.login, name = "login"),
-    re_path("register/", views.register, name = "register"),
-    re_path(r"validateLogin/", views.validateLogin, name= "validateLogin"),
-    re_path(r"user/", views.createUser, name= "createUser"),   
+    path("login/", views.loginPage, name = "login"),
+    path("register/", views.register, name = "register"),
+    path("account/", views.account, name= "account"),
+    path("logout/", views.user_logout, name= "logout"),
 ]

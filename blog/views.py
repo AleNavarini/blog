@@ -1,8 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.db import models
-from blog.models import Post, PageCounter, CarrImage
+from blog.models import Post, PageCounter, CarrImage, User
 from django.db.models import Q
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import login, logout, authenticate
+from django.contrib import messages
+
 
 counter = 0
 class YearlyPosts:
@@ -32,13 +36,14 @@ def homepage(request):
         postsByYear.append(YearlyPosts(year, [p for p in allPosts if p.fecha.year == year]))
 
     carrImages = CarrImage.objects.filter()
+
     return render(request,
                   "blog/home.html",
                   {"posts": posts,
                    "mostpopular" : postsPopular,
                    "counter":pageCounter,
                    "postsByYear": postsByYear,
-                   "carrImages": carrImages})
+                   "carrImages": carrImages,})
 
 def bio(request):
 
@@ -84,17 +89,53 @@ def sobre(request):
     return render(request, "blog/sobre.html")
 
 
-def login(request):
-    return render(request, "blog/login.html")
+def loginPage(request):
+    if request.method == "POST":
+        form = AuthenticationForm(request, data= request.POST)
+        if form.is_valid:
+            print(form)
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username= username, password= password)
+            if user is not None:
+                login(request, user)
+                messages.info(request, f"Inicaste sesion como {username}! ")
+                return redirect("blog:homepage")
+            else:
+                messages.error(request, "Ha habido un error al iniciar sesion")
+        
+    
+    if request.method == "GET":
+        form = AuthenticationForm()
+        return render(request,
+                    "blog/login.html",
+                    context= {"form" : form})
 
 def register(request):
-    return render(request, "blog/register.html")
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            messages.success(request, f" Registrado exitosamente!")
+            login(request, user)
+            return redirect("blog:homepage")
+        else:
+            for m in form.error_messages:
+                messages.error(request, "Ha habido un problema con el registro, revise los campos y vuelva a intentar")
+            return redirect("blog:homepage")
+    
+    if request.method == "GET":
+        form = UserCreationForm()
+        return render(request,
+                    "blog/register.html",
+                    context= {"form" : form})
 
-def validateLogin(request):
-    mail = request.POST.get('mail')
-    password = request.POST.get('password')
+def account(request):
+    return render(request, "blog/account.html")
+
+def user_logout(request):
+    logout(request)
+    return redirect("blog:homepage")
 
 
-def createUser(request):
-    return HttpResponse("Registro exitoso")
 

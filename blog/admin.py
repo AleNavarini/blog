@@ -15,3 +15,4 @@ class PostAdmin(admin.ModelAdmin):
 admin.site.register(Post,PostAdmin)
 admin.site.register(PageCounter)
 admin.site.register(CarrImage)
+admin.site.register(User)

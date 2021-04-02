@@ -11,21 +11,24 @@
 
     {% load static %}
     <link href="{% static 'style.css' %}" rel="stylesheet">
-    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+    
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="{% static 'images/logoIni.png' %}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
-    <script src="{% static 'bootstrap.min.js' %}"></script>
+
+    
     <script src="{% static 'logic.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>   
 </head>
 
 <body>
     <header>
         <nav>
 
-            <ul>
+            <ul id="header-ul">
                 <li><a href="/" class="logo"><img id="logo-img" src="{% static 'images/logoIni.png' %}"
                             onmouseover="hover(this);" onmouseout="unhover(this);" alt="Logo MCEI" width="80"
                             height="auto"></a></li>
@@ -43,16 +46,26 @@
                         </div>
                     </form>
                 </li>
+                {% if user.is_authenticated %}
+                <li><a href="/account" class="links">{{ user.username }}</a></li>
+                <li> 
+                    <a href="/logout">    
+                        <button type="button" class="btn btn-outline-light me-2" >Cerrar Sesion</button>
+                    </a> 
+                </li>
+                {% else %}
                 <li> 
                     <a href="/login"> 
                         <button type="button" class="btn btn-outline-light me-2" style="margin-left: 2em;">Login</button>
                     </a> 
                 </li>
                 <li> 
-                    <a href="/register"> 
+                    <a href="/register">    
                         <button type="button" class="btn btn-outline-light me-2" style="margin-left:-2.5em;">Registrarse</button>
                     </a> 
                 </li>
+                {% endif %}
+                
             </ul>
         </nav>
     </header>
@@ -60,8 +73,34 @@
         <h3 class="tituloh3">Medicina Cierta e Incierta</h3>
         <h6 class="subtituloh6">Salud, longevidad y opiniones sobre lo cierto y <br> lo incierto en la medicina</h6>
     </div>
-
-
+    
+    {% if messages %}
+        {% for message in messages %}
+        <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+            <div class="toast" style="position: absolute; top: 0; right: 0;" data-delay="3000">
+              <div class="toast-header">
+                <strong class="mr-auto">MCEI</strong>
+                <small class="text-muted">Just Now</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="toast-body">
+                {{ message }}
+              </div>
+            </div>
+          </div>
+            {% if message.tags == 'success'%}
+                <script>$('.toast').toast('show')</script>
+            {% elif message.tags == 'info'%}
+                <script>$('.toast').toast('show')</script>
+            {% elif message.tags == 'warning'%}
+                <script>$('.toast').toast('show')</script>
+            {% elif message.tags == 'error'%}
+                <script>$('.toast').toast('show')</script>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
     <section>
         {% block content %}
         {% endblock %}

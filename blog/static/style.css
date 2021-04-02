@@ -147,13 +147,13 @@ header{
 
 header ul{
     left: 5%;
-    width: 95%;
+    width: 100%;
     height: inherit;
-    margin: 0px auto;
+    margin: 0px;
 }
 header ul li{
     display: inline-block;
-    margin: 0px auto;
+    margin: 0px;
     height: inherit;
     line-height: 100px;
 }
@@ -236,9 +236,14 @@ header a{
     height: 300px;
     object-fit: cover;
 }
-.login-form{
+.form{
     width: 50%;
     position: relative;
     left: 25%;
-    text-align: center;
+    text-align: left;
+}
+#registerButton{
+    left: 40%;
+    position: relative;
+    width: 20%;
 }

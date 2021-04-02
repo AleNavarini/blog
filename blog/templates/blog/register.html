@@ -1,36 +1,17 @@
 {% extends 'blog/master.html' %}
 {% block content %}
-{% load static %}
-<script src="../../static/logic.js"></script>
-<main class="form-signin login-form" >
-    <form action="/user/" method="POST">
-        {% csrf_token %}
-      <br><br>
-      <h1 class="h3 mb-3 fw-normal">Registrarse</h1>
-  
-      <div class="form-floating" >
-        <label for="floatingInput">Usuario</label>
-        <input type="text" class="form-control" id="username" placeholder="juanperez12" required>        
-      </div>
-      <div class="form-floating" >
-        <label for="floatingInput">Nombre</label>
-        <input type="text" class="form-control" id="name" placeholder="juan" required>        
-      </div>
-      <div class="form-floating" >
-        <label for="floatingInput">Direccion E-mail</label>
-        <input type="email" class="form-control" id="mail" placeholder="name@example.com" required>        
-      </div>
-      <div class="form-floating">
-        <label for="floatingPassword">Contraseña</label>
-        <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
-      </div>
-      <!-- <div class="form-floating">
-        <label for="floatingPassword">Repetir Contraseña</label>
-        <input type="password" class="form-control" id="repeat_password" placeholder="Contraseña" required>
-      </div>--> 
-  <br>
-      <button class="w-100 btn btn-lg btn-primary" type="submit" >Registrarse</button>
-    </form>
-</main>
+<br><br>
 
+
+<div class="form form-group">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        
+<br>
+        <button id="registerButton" class="btn btn-primary" type="submit"> Registrarse </button> <br>
+    </form>
+    <script src="../../static/loadForm.js"></script>
+    <p> Si ya tiene una cuenta ingresa<a href="/login"> <b>aqui.</b></a></p>
+</div>
 {% endblock %}
