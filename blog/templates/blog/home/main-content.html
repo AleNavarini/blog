@@ -1,0 +1,85 @@
+<div class="container content">
+    <div class="row">
+      <div class="col-9">
+        <ul class="posts">
+          {% for p in posts %}
+          <li>
+            <div class="card posts">
+              <img src="{{p.foto.url}}" class="card-img-top post-img" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #103e73;">{{ p.titulo }}</h5>
+                <p class="card-text">{{ p.subtitulo| safe }}</p>
+                <form action="/posts/" method="GET">
+                  <button class="btn btn-primary" type="submit" name="post" value="{{p.id}}">Leer Mas</button>
+                </form>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-3">
+        <div class="border rounded-left additional-info">
+          <div>
+            <p style="font-size: 1.2em; ">
+              Contador de Visitas: <h3><strong>{{counter.counter}}</strong></h3>
+            </p>
+            <hr>
+            <h5>Mas Vistos:</h5>
+  
+            {% for mp in mostpopular %}
+  
+            <form action="/posts/" method="GET">
+              <button class="boton" type="submit" name="post" value="{{mp.id}}">{{ mp.titulo }}</button>
+            </form>
+  
+            {% endfor%}
+            <hr>
+            <h5>Archivo:</h5>
+            {% for p in postsByYear %}
+            <h4> {{p.year}} </h4>
+            {% for py in p.posts %}
+            <form action="/posts/" method="GET">
+              <button class="boton" type="submit" name="post" value="{{py.id}}">{{ py.titulo }}</button>
+            </form>
+            {% endfor%}
+            {% endfor%}
+            <hr>
+            <div id="my-slider" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <img src="../../static/images/elArteDeLaMedicina-Voltaire.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="../../static/images/heVivido-Twain.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="../../static/images/laIncertidumbre-Voltaire.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="../../static/images/laMedicina-Osler.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="../../static/images/laVidaEsBreve-hipocrates.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="../../static/images/quienDecide-Pope.jpg" class="d-block w-100" alt="...">
+                </div>
+                {% for img in carrImages %}
+                <div class="carousel-item">
+                  <img src="{{img.image}}" class="d-block w-100" alt="{{img.desc_alternativa}}">
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+  
+    </div>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+  </div>
