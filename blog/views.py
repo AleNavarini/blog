@@ -38,7 +38,7 @@ def homepage(request):
     carrImages = CarrImage.objects.filter()
 
     return render(request,
-                  "blog/home.html",
+                  "blog/home/home.html",
                   {"posts": posts,
                    "mostpopular" : postsPopular,
                    "counter":pageCounter,
@@ -69,12 +69,21 @@ def search(request):
     posts = posts.order_by('-fecha')
     postsPopular = Post.objects.filter().order_by('-viewCounter')[:3]
     pageCounter= PageCounter.objects.all()[0]
+    allPosts = Post.objects.filter().order_by('-fecha')
+    years = []
 
+    postsByYear = []
+    for year in years:
+        postsByYear.append(YearlyPosts(year, [p for p in allPosts if p.fecha.year == year]))
+
+    carrImages = CarrImage.objects.filter()
     return render(request,
-                "blog/home.html",
-                {"posts": posts,
-                "mostpopular" : postsPopular,
-                "counter":pageCounter})
+                  "blog/home/home.html",
+                  {"posts": posts,
+                   "mostpopular" : postsPopular,
+                   "counter":pageCounter,
+                   "postsByYear": postsByYear,
+                   "carrImages": carrImages,})
 
 def post(request):
     
