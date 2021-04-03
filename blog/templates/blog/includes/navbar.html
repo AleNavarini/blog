@@ -1,0 +1,44 @@
+<nav>
+    {% load static %}
+    <ul id="header-ul">
+        <li><a href="/" class="logo"><img id="logo-img" src="{% static 'images/logoIni.png' %}"
+                    onmouseover="hover(this);" onmouseout="unhover(this);" alt="Logo MCEI" width="80"
+                    height="auto"></a></li>
+        <li><a href="/" class="links">Inicio</a></li>
+        <li><a href="/articulos" class="links">Articulos</a></li>
+        <li><a href="/sobre" class="links">Sobre este blog</a></li>
+        <li><a href="/bio" class="links">Acerca de mi</a></li>
+        <li>
+            <form action="/search/" method="get">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control search-bar" placeholder="Buscar contenido, autor ..."
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-light me-2" style="margin-left: 2px;" type="button"
+                        id="button-addon2">Buscar</button>
+                </div>
+            </form>
+        </li>
+        {% if user.is_authenticated %}
+        <li><a href="/account" class="links">{{ user.username }}</a></li>
+        <li>
+            <a href="/logout">
+                <button type="button" class="btn btn-outline-light me-2">Cerrar Sesion</button>
+            </a>
+        </li>
+        {% else %}
+        <li>
+            <a href="/login">
+                <button type="button" class="btn btn-outline-light me-2"
+                    style="margin-left: 2em;">Login</button>
+            </a>
+        </li>
+        <li>
+            <a href="/register">
+                <button type="button" class="btn btn-outline-light me-2"
+                    style="margin-left:-2.5em;">Registrarse</button>
+            </a>
+        </li>
+        {% endif %}
+
+    </ul>
+</nav>
