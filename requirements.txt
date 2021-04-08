@@ -1,6 +1,6 @@
 ﻿astroid==2.3.3
 colorama==0.4.1
-Django==2.2.10
+Django==2.2.20
 django-ckeditor==5.8.0
 django-js-asset==1.2.2
 django-tinymce4-lite==1.7.5
